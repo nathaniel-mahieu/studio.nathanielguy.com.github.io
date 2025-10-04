@@ -1,0 +1,15 @@
+<p style="margin:25px; text-align:center; float:right;">
+<a href="/<%= filenamealize(@last_picture.title) %>" title="<%= h @last_picture.title %>" onclick="javascript:urchinTracker('/index_recent');">
+<img src="<%= '/thumbnails/' + filenamealize(@last_picture.title) + '_thumbnail.jpg' %>" alt="<%= @last_picture.title -%>" /><br />
+Most Recent Photo
+</a>
+</p>
+
+<p>Welcome to NathanielGuy Studio.  This is a portfolio of photography taken by me, NathanielGuy.  In my past work reflecting my subjects has been the source of my most interesting photos. 
+Reflecting subjects often allows you to think of them in an alternate way, which is one of my favorite aspects of art.  My reflections all began with a picture of a <a href="/a_spoon_full_of_sky">"Spoon Full of Sky"</a>, still one of my favorites. 
+<br />
+<br />
+Now my photographic style has moved to capturing people, moments, and emotion.  It really pleases me to embody emotions forever.  I have begun wedding photography which is a perfect place to do just that.  All of my favorites can be found here and I hope you enjoy them as much as me!
+<br />
+<br />
+If you wish to investigate <a href="/prints">purchasing prints</a>, please feel free.  Have a look around, try a <a href="search?phrase=<%= @search_term[0] %>" onclick="javascript:urchinTracker('/index_search');">search for something</a>!  After you see a picture, click on the link below to see another <a href="<%= filenamealize(@random_pic[0].title) %>" onclick="javascript:urchinTracker('/index_random');">random</a> one.</p>

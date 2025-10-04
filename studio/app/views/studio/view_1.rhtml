@@ -1,0 +1,24 @@
+<p id="photo_wrapper">
+<a href="/<%= @filename %>.jpg" title="<%= h @picture.title %>" onclick="javascript:urchinTracker('/mainphoto_file');" target="_blank">
+<img src="previews/<%= @filename %>_preview.jpg" alt="<%= h @picture.title %>" />
+</a>
+</p>
+
+<p style="text-align:center; color: #888;">
+<a href="<%= filenamealize(@random_pic[0].title) %>" onclick="javascript:urchinTracker('/view_random');" style="font-size:smaller;">Next Photo</a>
+-
+<a href="http://www.photoblog-community.com/Vote.php?ID=2484" style="font-size:smaller;">Vote</a>
+</p>
+
+<h2 id="photo_title"><%= @picture.title %></h2>
+
+<p id="photo_description">
+<%= h @picture.description %>
+<a href="javascript:;" onclick="Effect.Appear('photo_info'); javascript:urchinTracker('/mainphoto_moreinfo');">More...</a>
+</p>
+
+<p id="photo_info" style="display:none;">
+<b>ID: </b> <%= h @picture.id -%><br />
+<% for column in Picture.content_columns -%><b><%= column.human_name -%>:</b> <%=h @picture.send(column.name) -%><br />
+<% end %>
+</p>

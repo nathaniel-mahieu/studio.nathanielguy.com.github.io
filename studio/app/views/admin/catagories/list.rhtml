@@ -1,0 +1,27 @@
+<h1>Listing catagories</h1>
+
+<table>
+  <tr>
+  <% for column in Catagory.content_columns %>
+    <th><%= column.human_name %></th>
+  <% end %>
+  </tr>
+  
+<% for catagory in @catagories %>
+  <tr>
+  <% for column in Catagory.content_columns %>
+    <td><%=h catagory.send(column.name) %></td>
+  <% end %>
+    <td><%= link_to 'Show', :action => 'show', :id => catagory %></td>
+    <td><%= link_to 'Edit', :action => 'edit', :id => catagory %></td>
+    <td><%= link_to 'Destroy', { :action => 'destroy', :id => catagory }, :confirm => 'Are you sure?' %></td>
+  </tr>
+<% end %>
+</table>
+
+<%= link_to 'Previous page', { :page => @catagory_pages.current.previous } if @catagory_pages.current.previous %>
+<%= link_to 'Next page', { :page => @catagory_pages.current.next } if @catagory_pages.current.next %> 
+
+<br />
+
+<%= link_to 'New catagory', :action => 'new' %>

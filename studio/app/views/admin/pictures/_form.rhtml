@@ -1,0 +1,77 @@
+<%= error_messages_for 'picture' %>
+
+<!--[form:picture]-->
+<% if controller.action_name == 'new' %> 
+<p>
+Picture:<br />
+<input type="file" name="picture_file" />
+</p>
+<% end %>
+
+<p><label for="picture_title">Title</label><br/>
+<%= text_field 'picture', 'title'  %></p>
+
+<p><label for="picture_description">Description</label><br/>
+<%= text_area 'picture', 'description'  %></p>
+
+<p><label for="picture_keywords">Keywords</label><br/>
+<%= text_field 'picture', 'keywords'  %></p>
+
+<p>Catagories:<br />
+<% for catagory in @catagories %>
+  <%= catagory.name + ': <input type="checkbox" name="picture[catagory_ids][]" value="' + catagory.id.to_s + '"' %>
+  <% if @picture.catagories.include? catagory %> checked="checked"<% end %>
+  <%= ' />' %>
+<% end %>
+</p>
+
+<p><label for="picture_hidden">Hidden</label><br/>
+No: <input type="radio" name="picture[hidden]" value="n" <% if @picture[:hidden] == 'n' %> checked="checked"<% end %> />  Yes:<input type="radio" name="picture[hidden]" value="y" <% if @picture[:hidden] == 'y' %> checked="checked"<% end %> /></p>
+
+<% if params['action'] == 'edit' %>
+
+<p><label for="picture_date_added">Date added</label><br/>
+</p>
+
+<p><label for="picture_date_taken">Date taken</label><br/>
+</p>
+
+<p><label for="picture_camera">Camera</label><br/>
+<%= text_field 'picture', 'camera'  %></p>
+
+<p><label for="picture_resolution">Resolution</label><br/>
+<%= text_field 'picture', 'resolution'  %></p>
+
+<p><label for="picture_mode">Mode</label><br/>
+<%= text_field 'picture', 'mode'  %></p>
+
+<p><label for="picture_shutter_speed">Shutter speed</label><br/>
+<%= text_field 'picture', 'shutter_speed'  %></p>
+
+<p><label for="picture_flash">Flash</label><br/>
+<%= text_field 'picture', 'flash'  %></p>
+
+<p><label for="picture_exposure_time">Exposure time</label><br/>
+<%= text_field 'picture', 'exposure_time'  %></p>
+
+<p><label for="picture_iso">Iso</label><br/>
+<%= text_field 'picture', 'iso'  %></p>
+
+<p><label for="picture_metering">Metering</label><br/>
+<%= text_field 'picture', 'metering'  %></p>
+
+<p><label for="picture_aperture">Aperture</label><br/>
+<%= text_field 'picture', 'aperture'  %></p>
+
+<p><label for="picture_focal_length">Focal length</label><br/>
+<%= text_field 'picture', 'focal_length'  %></p>
+
+<p><label for="picture_artist">Artist</label><br/>
+<%= text_field 'picture', 'artist'  %></p>
+
+<p><label for="picture_copyright">Copyright</label><br/>
+<%= text_field 'picture', 'copyright'  %></p>
+
+<% end %>
+<!--[eoform:picture]-->
+

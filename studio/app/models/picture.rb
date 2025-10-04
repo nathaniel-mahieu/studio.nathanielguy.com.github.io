@@ -1,0 +1,76 @@
+require 'mathn'
+
+class Picture < ActiveRecord::Base
+  has_and_belongs_to_many :catagories
+  
+  validates_presence_of :title, :hidden, :description
+  validates_uniqueness_of :title
+  
+    #RAILS_ROOT = '/home/nathan/rails/studio'
+
+  def before_save
+    if not @image_file.nil?
+      @image_file.write("#{RAILS_ROOT}/public/#{@filename}.jpg")
+      @thumbnail.write("#{RAILS_ROOT}/public/thumbnails/#{@filename}_thumbnail.jpg")
+      @image_preview.write("#{RAILS_ROOT}/public/previews/#{@filename}_preview.jpg")
+      
+      exif_arrays = @image_file.get_exif_by_entry
+      exif = Hash.new
+      for key_val in exif_arrays
+        exif[key_val[0].downcase] = key_val[1]
+      end
+      
+      date_exif = exif['datetimeoriginal'].split ':', 3
+      date = ''
+      for part in date_exif
+        date += part
+      end
+      date.chomp! '.'
+      
+      #Exif Infoz
+      #Write title etc to tags
+      self.date_taken = date
+      self.camera = exif['model']
+      self.resolution = !(exif['exifimagewidth'].nil? || exif['exifimagelength'].nil?) ? exif['exifimagewidth'] + 'x' + exif['exifimagelength'] : 'Unknown'
+      self.shutter_speed = exif['shutterspeedvalue']
+      self.copyright = '2007 NathanielGuy Mahieu'
+      self.artist = 'NathanielGuy Mahieu'
+      self.focal_length = exif['focallength']
+      self.aperture = exif['aperturevalue']
+      self.metering = exif['meteringmode']
+      self.iso = exif['isospeedratings']
+      self.exposure_time = exif['exposuretime']
+      self.flash = exif['flash']
+      self.mode = exif['exposuremode']
+    end
+  end
+  
+  def after_destroy
+    image = "#{RAILS_ROOT}/public/#{@filename}.jpg"
+    thumbnail = "#{RAILS_ROOT}/public/thumbnails/#{@filename}_thumbnail.jpg"
+    preview = "#{RAILS_ROOT}/public/previews/#{@filename}_preview.jpg"
+    File.delete(image) if File.exist?(image)
+    File.delete(thumbnail) if File.exist?(thumbnail)
+    File.delete(preview) if File.exist?(preview)
+  end
+  
+  def filename= (filename)
+    @filename = filename
+  end
+  
+  def image_file= (input_pic) 
+    @image_file = input_pic
+    
+    if input_pic.columns > input_pic.rows
+      thumb_scale_factor = 200 / input_pic.columns
+      preview_scale_factor = 700 / input_pic.columns
+    else
+      thumb_scale_factor = 200 / input_pic.rows
+      preview_scale_factor = 700 / input_pic.rows
+    end
+    
+    @image_preview = input_pic.resize(preview_scale_factor)
+    @thumbnail = input_pic.resize(thumb_scale_factor)
+  end
+  
+end

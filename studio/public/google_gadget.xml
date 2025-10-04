@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<Module>
+  <ModulePrefs title="NathanielGuy Studio: Photostream" title_url="http://studio.nathanielguy.com/" height="250" author="NathanielGuy" /> 
+  <Content type="html">
+     <![CDATA[ 
+       <iframe src="http://studio.nathanielguy.com/google_gadget" style="border:0px; margin:0px; padding:0px; width:100%; height:250px;"></iframe>
+     ]]>
+  </Content> 
+</Module>

@@ -1,0 +1,61 @@
+base_url = 'http://studio.nathanielguy.com/'
+
+xml.instruct! :xml, :version=>"1.0", :encoding=>"UTF-8"
+
+xml.rss(:version=>"2.0", 'xmlns:media' => "http://search.yahoo.com/mrss/") {
+
+xml.channel {
+
+xml.title "NathanielGuy Studio"
+xml.link base_url
+xml.description "NathanielGuy Studio: this is a portfolio of photography taken by me, NathanielGuy. I allow you to think of my subjects in an alternate way thriugh my photos, which is one of my favorite aspects of all art. My photographic style has moved from nature and macro to capturing people, moments, and emotion."
+xml.language "en-us"
+xml.copyright "All rights reserved, NathanielGuy Mahieu."
+xml.category "Photography"
+xml.image {
+  xml.title 'NathanielGuy'
+  xml.url(base_url + 'images/tux_rss.png')
+  xml.link base_url
+  }
+xml.lastBuildDate @last_picture.date_added.rfc822
+xml.managingEditor "photography@nathanielguy.com"
+xml.webMaster "photography@nathanielguy.com"
+
+@pictures.reverse.each { |picture|
+  picture['a_name'] = filenamealize(picture.title)
+  picture['path'] = "#{RAILS_ROOT}/public/previews/" + filenamealize(picture.title) + "_preview.jpg"
+  picture['url'] = base_url + 'previews/' + filenamealize(picture.title) + '_preview.jpg'
+  picture['view_url'] = base_url + filenamealize(picture.title)
+
+  xml.item {
+  xml.title picture.title
+  xml.category "photo"
+  for cat in picture.catagories 
+    xml.category cat.name
+  end
+  xml.link picture.view_url
+  xml.description "<p><a href=\"#{base_url}#{filenamealize(picture.title)}\" title=\"#{picture.title}\"><img src=\"#{base_url}thumbnails/#{filenamealize(picture.title)}_thumbnail.jpg\" alt=\"#{picture.title}\" /></a></p><h1 style=\"font-size:larger;\">#{picture.title}</h1><p>#{picture.description}</p>"
+  xml.author "photography@nathanielguy.com"
+  xml.pubDate picture.date_added.rfc822
+  xml.guid base_url + filenamealize(picture.title), :isPermaLink => 'true'
+  xml.source picture.title, :url => base_url + filenamealize(picture.title)
+
+    xml.tag! 'media:title', picture.title, :type => 'plain'
+	xml.tag! 'media:description', picture.description	, :type => 'html'
+	cats = ''
+	picture.catagories.each {|cat| cats << cat.name + ' ' }
+	xml.tag! 'media:keywords', picture.keywords +  ' ' +cats
+	xml.tag! 'media:category', 'photography'
+	xml.tag! 'media:credit', 'NathanielGuy Mahieu', :role => 'photographer'
+	xml.tag! 'media:text', "<p><a href=\"#{base_url}#{filenamealize(picture.title)}\"><img src=\"#{base_url}thumbnails/#{filenamealize(picture.title)}_thumbnail.jpg\" alt=\"#{picture.title}\" /></a></p><h1 style=\"font-size:larger;\">#{picture.title}</h1><p>#{picture.description}</p>", :type => 'html'
+	xml.tag! 'media:thumbnail', :url => base_url + 'thumbnails/' + picture.a_name + '_thumbnail.jpg'
+    
+	xml.tag! 'media:content', :url => base_url + 'previews/' + picture.a_name + '_preview.jpg', :medium => 'image', :type => 'image/jpeg', :isDefault => 'true', :expression => 'sample'
+    xml.tag! 'media:content', :url => base_url + picture.a_name + '.jpg', :type => 'image/jpeg', :isDefault => 'false', :expression => 'full'
+
+    }
+}
+
+}
+}
+

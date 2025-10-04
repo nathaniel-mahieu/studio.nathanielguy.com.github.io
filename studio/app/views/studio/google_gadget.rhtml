@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>NathanielGuy Studio - Google Gadget</title>
+<%= javascript_include_tag "prototype", "effects" %>
+<style type="text/css">
+body {
+ margin:0px; padding:0px; text-align:center;
+ }
+
+img{
+ border:0;
+ }
+</style>
+</head>
+
+<body>
+<div id="photostream">
+
+  <span id="photostream">
+  <%= '<h3 style="padding:0px; margin:5px;  font-family: Arial, Helvetica, sans-serif; color:#777777; text-align:left;"><a target="_blank" href="/' + filenamealize(@pic.title) + '" style="background-color:transparent;color:#777777; text-decoration:none;" title="' %><%= h @pic.title %><%= '">' + @pic.title + '</a></h3>' %>
+  <a target="_blank" href="/<%= filenamealize(@pic.title) %>" title="<%= h @pic.title -%>" style="background-color:transparent; text-decoration:none;">
+  <img src="/<%= 'thumbnails/' + filenamealize(@pic.title) + '_thumbnail.jpg' %>" style="margin:15px; border:0px;" class="portfolio" alt="<%= @pic.title -%>" />
+  </a></span>
+
+</div>
+
+<%= periodically_call_remote( :url => { :action => :google_gadget_pic }, :frequency => 10, :success => 'Element.remove(document.getElementById("photostream").getElementsByTagName("span")[0]); new Insertion.Bottom("photostream", request.responseText); Effect.Appear(document.getElementById("photostream").getElementsByTagName("span")[0]);' )%>
+
+</body>
+</html>

@@ -1,0 +1,9 @@
+<% if rand(6) != 3  %>
+
+<%= '<span style="display:none;"><a href="/' + filenamealize(@picture.title) + '" style="background-color:transparent; text-decoration:none;" title="' %><%= h @picture.title %><%= '"><img src="/thumbnails/' + filenamealize(@picture.title) + '_thumbnail.jpg" style="margin:15px;" class="portfolio" alt="' + @picture.title + '" /></a>' %>
+
+<% else %>
+
+<span style="display:none;"><iframe src="ads" scrolling="no" style="vertical-align:middle; display:inline; border:1px solid #000; opacity: .6; filter: alpha(opacity=60); height:200px; width:200px; margin:15px; padding:0; overflow:hidden;"></iframe></span>
+
+<% end %>

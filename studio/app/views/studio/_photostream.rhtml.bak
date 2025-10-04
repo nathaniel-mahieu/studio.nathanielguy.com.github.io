@@ -1,0 +1,6 @@
+
+<% for pic in @photostream_pics %>
+  <a href="/<%= filenamealize(pic.title) %>" title="<%= h pic.title -%>" onclick="javascript:urchinTracker('/photostream_photo');">
+  <img src="/<%= 'thumbnails/' + filenamealize(pic.title) + '_thumbnail.jpg' %>" class="photostream" alt="<%= pic.title -%>" />
+  </a>
+<% end %>

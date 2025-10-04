@@ -1,0 +1,69 @@
+body {
+ background-image:url('../images/bgcolor.png');
+ margin:0px;
+ font-family: Arial, Helvetica, sans-serif;
+ font-size:   13px;
+ line-height: 18px;
+ text-align:center;
+ }
+a:link {
+ color:#000;
+ }
+a:visited {
+ text-decoration: none;
+ color:#535353;
+ }
+a:active {
+ text-decoration:overline;
+ }
+a:hover {
+ color: #fff; background-color:#000;
+ }
+img {
+ border:0px;
+ vertical-align:middle;
+ }
+
+div.layout_container {
+ width:760px; margin:auto; height:auto; background-color:#fff; background-image:url('../images/sun.jpg'); background-repeat:no-repeat; background-position:100% 0%;
+ }
+div.header {
+ text-align:center;
+ }
+div.bordering {
+ border-bottom: 10px solid #777;
+ }
+
+div.main_content {
+ padding:10px; padding-left:20px; padding-right:20px; min-height:350px; padding-bottom:50px;
+ }
+img.portfolio {
+ border:1px solid #000; opacity: .6; filter: alpha(opacity=60);
+ }
+div.photostream {
+ padding:5px; text-align:center; height:232px;
+ }
+
+div.site_info {
+ padding:3px; padding-left:6px; padding-right:6px; text-align:center; color:#535353; font-size:smaller;
+ }
+ 
+hr.break {
+ border:1px solid #a0a0a0;
+ }
+
+p.info {
+ margin-bottom:0px; margin-top:0px; color:#777777;
+ }
+
+strong.styled {
+ font-weight:700; color:#878787;
+ }
+
+div.infobar {
+ font-size:small; font-weight:500; float:right; margin-top:20px;
+ }
+ 
+h1.title {
+ margin-bottom:20px; float:left; line-height:40px;
+ }

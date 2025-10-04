@@ -1,0 +1,19 @@
+<html>
+<head>
+  <title>NathanielGuy Studios: <%= controller.action_name %></title>
+  <%= stylesheet_link_tag 'scaffold' %>
+</head>
+<body>
+
+<div style="border-top:1px solid #000; border-bottom:1px solid #000; margin:5px; padding:5px;">
+<%= link_to 'NathanielGuy Studios', :controller => '/' %>
+ - <%= link_to 'Pictures', :controller => 'pictures' %>
+ - <%= link_to 'Catagories', :controller => 'catagories' %>
+</div>
+
+<p style="color: green"><%= flash[:notice] %></p>
+
+<%= @content_for_layout %>
+
+</body>
+</html>

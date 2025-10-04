@@ -1,0 +1,38 @@
+<h1>
+<% if params[:catagory] != nil %>
+<%= @catagory_viewing.name %>
+<span style="font-size:.3em; font-weight:500;">
+<%= @catagory_viewing[:description] %>
+</span>
+<% else %>
+All
+<span style="font-size:.3em; font-weight:500;">
+The entire collection of photography here at NathanielGuy Studios
+</span>
+<% end %>
+</h1>
+
+<div style="margin-top:5px;">
+Catagory: <%= link_to 'All', :action => 'browse' %>
+
+<% for catagory in @catagories %>
+ - <a href="/browse?catagory=<%= catagory.name.downcase %>"><%= catagory.name %></a>
+<% end %>
+</div>
+
+<hr class="break" />
+
+<% for picture in @catagories_pictures.reverse %>
+<div style="margin-top:25px; font-size:.8em; clear:both;">
+
+<a href="/<%= filenamealize(picture.title) %>" title="<%= h picture.title %>"><img src="<%= '/thumbnails/' + filenamealize(picture.title) + '_thumbnail.jpg' %>" style="float:left; margin-right:18px; margin-top:18px; margin-bottom:18px;" alt="<%= picture.title -%>" /></a>
+
+<h3 style="margin-bottom:4px; margin-top:0px;"><a href="/<%= filenamealize(picture.title) %>" title="<%= h picture.title %>"><%= picture.title %></a></h3>
+<p class="info" style="margin-bottom:4px; margin-top:0;"><%= picture.description[0...350] %>...</p>
+<p class="info" style="margin:0px;"><strong class="styled">Keywords</strong>: <%= picture.keywords %></p>
+<p class="info" style="margin:0px;"><strong class="styled">Catagories</strong>: <% for catagory in picture.catagories %><%= catagory[:name] + ' - ' %><% end %></p>
+<p class="info" style="margin:0px;"><strong class="styled">Artist</strong>: <%= picture.artist %></p>
+</div>
+<% end %>
+
+<div style="clear:both;"></div>

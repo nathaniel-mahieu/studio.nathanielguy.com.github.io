@@ -1,0 +1,32 @@
+<h1>Listing pictures</h1>
+
+<table style="width:100%;">
+  <tr>
+  <% for column in Picture.content_columns[0...5] %>
+    <th><%= column.human_name %></th>
+  <% end %>
+  <th>Views</th>
+  <th>Catagories</th>
+  <th>Actions</th>
+  </tr>
+  
+<% for picture in @pictures %>
+  <tr>
+  <% for column in Picture.content_columns[0...5] %>
+    <td><%=h picture.send(column.name) %></td>
+  <% end %>
+    <td><%= picture.views %></td>
+    <td><% for catagory in picture.catagories %><%= catagory.name %><% end %></td>
+    <td><%= link_to 'S', :action => 'show', :id => picture %> - 
+    <%= link_to 'E', :action => 'edit', :id => picture %> - 
+    <%= link_to 'R', { :action => 'destroy', :id => picture }, :confirm => 'Are you sure?' %></td>
+  </tr>
+<% end %>
+</table>
+
+<%= link_to 'Previous page', { :page => @picture_pages.current.previous } if @picture_pages.current.previous %>
+<%= link_to 'Next page', { :page => @picture_pages.current.next } if @picture_pages.current.next %> 
+
+<br />
+
+<%= link_to 'New picture', :action => 'new' %>
