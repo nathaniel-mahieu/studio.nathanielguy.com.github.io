@@ -1,0 +1,25 @@
+/* css */
+#header {
+	width: 746px;
+	height: 265px;
+	background-image: url('../images/header.jpg');
+	overflow:hidden; margin-top:-90px;
+	}
+#header span {
+	display: block;
+	width: 0;
+	height: 0;
+	overflow: hidden;
+	}
+
+h1, h2, h3, h4, h5, h6 {
+ margin:0px;
+ }
+
+p {
+ margin-left:15px;
+ }
+
+img {
+ border:0;
+ }

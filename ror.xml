@@ -1,0 +1,623 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="/stylesheets/ror.css" type="text/css"?>
+
+<!-- This is a ROR formatted XML document describing the resources of the website http://studio.nathanielguy.com/. For information about the ROR format, go to www.rorweb.com -->
+
+<rdf:RDF xmlns="http://rorweb.com/0.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"> 
+
+<!-- ******************** Main Info ******************** --> 
+<Resource rdf:about="main">
+    <rorinfo>This is a ROR formatted XML document describing the resources of the website http://studio.nathanielguy.com/. For information about the ROR format, go to www.rorweb.com</rorinfo>
+    <type>Main</type>
+    <type>Website</type>
+    <title>NathanielGuy Studio</title>
+    <url>http://studio.nathanielguy.com/</url>
+    <desc>NathanielGuy Studio; a place for photography to reside and flourish.  Please take a look and enjoy!</desc>
+    <keywords>spoon,snow,sky,prints,nature,picture,interesting,browse,full,studios,flower,nathanielguy,album,gallery,portfolio,</keywords>
+</Resource>
+
+<!-- ******************** Contact Info ***************** --> 
+<Resource rdf:about="contact">
+    <type>Contact</type>
+    <title>Contact Info</title>
+    <name>NathanielGuy</name>
+    <url>http://studio.nathanielguy.com/</url>
+    <phone>5738237405</phone>
+    <resourceOf rdf:resource="main"/>
+</Resource>
+
+<Resource rdf:about="address">
+    <type>Address</type>
+    <title>Address</title>
+    <address1>18700 N JayJay</address1>
+    <city>Centralia</city>
+    <postalCode>65240</postalCode>
+    <stateRegion>MO</stateRegion>
+    <country>US</country>
+    <resourceOf rdf:resource="contact"/>
+</Resource>
+
+<!-- ******************** Site Map Info ***************** --> 
+<Resource rdf:about="sitemap">
+    <type>SiteMap</type>
+    <title>Sitemap Information</title>
+    <sitemapGoogle>http://studio.nathanielguy.com/sitemap.xml</sitemapGoogle>
+    <sitemapROR>http://studio.nathanielguy.com/ror.xml</sitemapROR>
+    <sitemapYahoo/>
+    <resourceOf rdf:resource="main"/>
+</Resource>
+
+<Resource rdf:about="map-about">
+    <title>About</title>
+    <seeAlso rdf:resource="main"/>
+    <resourceOf rdf:resource="sitemap"/>
+</Resource>
+
+<Resource rdf:about="map-contact">
+    <title>Contact</title>
+    <seeAlso rdf:resource="contact"/>
+    <resourceOf rdf:resource="sitemap"/>
+</Resource>
+
+<!-- ******************** Sitemap Items ***************** -->
+<Resource rdf:about="0">
+   <url>http://studio.nathanielguy.com/</url>
+   <updatePeriod>week</updatePeriod>
+   <sortOrder>0</sortOrder>
+   <resourceOf rdf:resource="sitemap"/>
+</Resource>
+
+<Resource rdf:about="1">
+   <url>http://studio.nathanielguy.com/favicon.ico</url>
+   <updatePeriod>week</updatePeriod>
+   <sortOrder>0</sortOrder>
+   <resourceOf rdf:resource="sitemap"/>
+</Resource>
+
+<Resource rdf:about="2">
+   <url>http://studio.nathanielguy.com/rss.xml</url>
+   <updatePeriod>week</updatePeriod>
+   <sortOrder>0</sortOrder>
+   <resourceOf rdf:resource="sitemap"/>
+</Resource>
+
+<Resource rdf:about="3">
+   <url>http://studio.nathanielguy.com/ror.xml</url>
+   <updatePeriod>week</updatePeriod>
+   <sortOrder>0</sortOrder>
+   <resourceOf rdf:resource="sitemap"/>
+</Resource>
+
+<Resource rdf:about="4">
+   <url>http://studio.nathanielguy.com/sitemap.xml</url>
+   <updatePeriod>week</updatePeriod>
+   <sortOrder>0</sortOrder>
+   <resourceOf rdf:resource="sitemap"/>
+</Resource>
+
+<Resource rdf:about="5">
+   <url>http://studio.nathanielguy.com/stylesheets/main.css?1142834232</url>
+   <updatePeriod>week</updatePeriod>
+   <sortOrder>0</sortOrder>
+   <resourceOf rdf:resource="sitemap"/>
+</Resource>
+
+<Resource rdf:about="6">
+   <url>http://studio.nathanielguy.com/browse</url>
+   <updatePeriod>week</updatePeriod>
+   <sortOrder>0</sortOrder>
+   <resourceOf rdf:resource="sitemap"/>
+</Resource>
+
+<Resource rdf:about="7">
+   <url>http://studio.nathanielguy.com/slideshow</url>
+   <updatePeriod>week</updatePeriod>
+   <sortOrder>0</sortOrder>
+   <resourceOf rdf:resource="sitemap"/>
+</Resource>
+
+<Resource rdf:about="8">
+   <url>http://studio.nathanielguy.com/search</url>
+   <updatePeriod>week</updatePeriod>
+   <sortOrder>0</sortOrder>
+   <resourceOf rdf:resource="sitemap"/>
+</Resource>
+
+<Resource rdf:about="9">
+   <url>http://studio.nathanielguy.com/prints</url>
+   <updatePeriod>week</updatePeriod>
+   <sortOrder>0</sortOrder>
+   <resourceOf rdf:resource="sitemap"/>
+</Resource>
+
+<Resource rdf:about="10">
+   <url>http://studio.nathanielguy.com/about</url>
+   <updatePeriod>week</updatePeriod>
+   <sortOrder>0</sortOrder>
+   <resourceOf rdf:resource="sitemap"/>
+</Resource>
+
+<Resource rdf:about="11">
+   <url>http://studio.nathanielguy.com/a_spoon_full_of_sky</url>
+   <updatePeriod>week</updatePeriod>
+   <sortOrder>0</sortOrder>
+   <resourceOf rdf:resource="sitemap"/>
+</Resource>
+
+<Resource rdf:about="12">
+   <url>http://studio.nathanielguy.com/browse?catagory=reflection</url>
+   <updatePeriod>week</updatePeriod>
+   <sortOrder>0</sortOrder>
+   <resourceOf rdf:resource="sitemap"/>
+</Resource>
+
+<Resource rdf:about="13">
+   <url>http://studio.nathanielguy.com/browse?catagory=nature</url>
+   <updatePeriod>week</updatePeriod>
+   <sortOrder>0</sortOrder>
+   <resourceOf rdf:resource="sitemap"/>
+</Resource>
+
+<Resource rdf:about="14">
+   <url>http://studio.nathanielguy.com/eek_a_spider</url>
+   <updatePeriod>week</updatePeriod>
+   <sortOrder>0</sortOrder>
+   <resourceOf rdf:resource="sitemap"/>
+</Resource>
+
+<Resource rdf:about="15">
+   <url>http://studio.nathanielguy.com/the_lives_of_wood_worms</url>
+   <updatePeriod>week</updatePeriod>
+   <sortOrder>0</sortOrder>
+   <resourceOf rdf:resource="sitemap"/>
+</Resource>
+
+<Resource rdf:about="16">
+   <url>http://studio.nathanielguy.com/shameful_head</url>
+   <updatePeriod>week</updatePeriod>
+   <sortOrder>0</sortOrder>
+   <resourceOf rdf:resource="sitemap"/>
+</Resource>
+
+<Resource rdf:about="17">
+   <url>http://studio.nathanielguy.com/lines_in_the_bark</url>
+   <updatePeriod>week</updatePeriod>
+   <sortOrder>0</sortOrder>
+   <resourceOf rdf:resource="sitemap"/>
+</Resource>
+
+<Resource rdf:about="18">
+   <url>http://studio.nathanielguy.com/pure_bright_and_simple_sunflower</url>
+   <updatePeriod>week</updatePeriod>
+   <sortOrder>0</sortOrder>
+   <resourceOf rdf:resource="sitemap"/>
+</Resource>
+
+<Resource rdf:about="19">
+   <url>http://studio.nathanielguy.com/warm_white_flowers_in_the_sky</url>
+   <updatePeriod>week</updatePeriod>
+   <sortOrder>0</sortOrder>
+   <resourceOf rdf:resource="sitemap"/>
+</Resource>
+
+<Resource rdf:about="20">
+   <url>http://studio.nathanielguy.com/budding_whites_and_yellows_of_spring</url>
+   <updatePeriod>week</updatePeriod>
+   <sortOrder>0</sortOrder>
+   <resourceOf rdf:resource="sitemap"/>
+</Resource>
+
+<Resource rdf:about="21">
+   <url>http://studio.nathanielguy.com/white_flower_focus</url>
+   <updatePeriod>week</updatePeriod>
+   <sortOrder>0</sortOrder>
+   <resourceOf rdf:resource="sitemap"/>
+</Resource>
+
+<Resource rdf:about="22">
+   <url>http://studio.nathanielguy.com/texture_butterfly</url>
+   <updatePeriod>week</updatePeriod>
+   <sortOrder>0</sortOrder>
+   <resourceOf rdf:resource="sitemap"/>
+</Resource>
+
+<Resource rdf:about="23">
+   <url>http://studio.nathanielguy.com/hummingbird_grasshopper</url>
+   <updatePeriod>week</updatePeriod>
+   <sortOrder>0</sortOrder>
+   <resourceOf rdf:resource="sitemap"/>
+</Resource>
+
+<Resource rdf:about="24">
+   <url>http://studio.nathanielguy.com/wind_chimes</url>
+   <updatePeriod>week</updatePeriod>
+   <sortOrder>0</sortOrder>
+   <resourceOf rdf:resource="sitemap"/>
+</Resource>
+
+<Resource rdf:about="25">
+   <url>http://studio.nathanielguy.com/purple_and_white</url>
+   <updatePeriod>week</updatePeriod>
+   <sortOrder>0</sortOrder>
+   <resourceOf rdf:resource="sitemap"/>
+</Resource>
+
+<Resource rdf:about="26">
+   <url>http://studio.nathanielguy.com/reflecto_glass</url>
+   <updatePeriod>week</updatePeriod>
+   <sortOrder>0</sortOrder>
+   <resourceOf rdf:resource="sitemap"/>
+</Resource>
+
+<Resource rdf:about="27">
+   <url>http://studio.nathanielguy.com/falls_rain_remains</url>
+   <updatePeriod>week</updatePeriod>
+   <sortOrder>0</sortOrder>
+   <resourceOf rdf:resource="sitemap"/>
+</Resource>
+
+<Resource rdf:about="28">
+   <url>http://studio.nathanielguy.com/the_horses_eye</url>
+   <updatePeriod>week</updatePeriod>
+   <sortOrder>0</sortOrder>
+   <resourceOf rdf:resource="sitemap"/>
+</Resource>
+
+<Resource rdf:about="29">
+   <url>http://studio.nathanielguy.com/bee_hind</url>
+   <updatePeriod>week</updatePeriod>
+   <sortOrder>0</sortOrder>
+   <resourceOf rdf:resource="sitemap"/>
+</Resource>
+
+<Resource rdf:about="30">
+   <url>http://studio.nathanielguy.com/yard_in_a_spoon</url>
+   <updatePeriod>week</updatePeriod>
+   <sortOrder>0</sortOrder>
+   <resourceOf rdf:resource="sitemap"/>
+</Resource>
+
+<Resource rdf:about="31">
+   <url>http://studio.nathanielguy.com/spoon_flower</url>
+   <updatePeriod>week</updatePeriod>
+   <sortOrder>0</sortOrder>
+   <resourceOf rdf:resource="sitemap"/>
+</Resource>
+
+<Resource rdf:about="32">
+   <url>http://studio.nathanielguy.com/the_bus_ride_book</url>
+   <updatePeriod>week</updatePeriod>
+   <sortOrder>0</sortOrder>
+   <resourceOf rdf:resource="sitemap"/>
+</Resource>
+
+<Resource rdf:about="33">
+   <url>http://studio.nathanielguy.com/tree_boots</url>
+   <updatePeriod>week</updatePeriod>
+   <sortOrder>0</sortOrder>
+   <resourceOf rdf:resource="sitemap"/>
+</Resource>
+
+<Resource rdf:about="34">
+   <url>http://studio.nathanielguy.com/sweeping_the_snow</url>
+   <updatePeriod>week</updatePeriod>
+   <sortOrder>0</sortOrder>
+   <resourceOf rdf:resource="sitemap"/>
+</Resource>
+
+<Resource rdf:about="35">
+   <url>http://studio.nathanielguy.com/orange_tree_blue_sky</url>
+   <updatePeriod>week</updatePeriod>
+   <sortOrder>0</sortOrder>
+   <resourceOf rdf:resource="sitemap"/>
+</Resource>
+
+<Resource rdf:about="36">
+   <url>http://studio.nathanielguy.com/augerasaurous</url>
+   <updatePeriod>week</updatePeriod>
+   <sortOrder>0</sortOrder>
+   <resourceOf rdf:resource="sitemap"/>
+</Resource>
+
+<Resource rdf:about="37">
+   <url>http://studio.nathanielguy.com/boughs_of_snow</url>
+   <updatePeriod>week</updatePeriod>
+   <sortOrder>0</sortOrder>
+   <resourceOf rdf:resource="sitemap"/>
+</Resource>
+
+<Resource rdf:about="38">
+   <url>http://studio.nathanielguy.com/three_in_a_row</url>
+   <updatePeriod>week</updatePeriod>
+   <sortOrder>0</sortOrder>
+   <resourceOf rdf:resource="sitemap"/>
+</Resource>
+
+<Resource rdf:about="39">
+   <url>http://studio.nathanielguy.com/rainbow_fall_trees</url>
+   <updatePeriod>week</updatePeriod>
+   <sortOrder>0</sortOrder>
+   <resourceOf rdf:resource="sitemap"/>
+</Resource>
+
+<Resource rdf:about="40">
+   <url>http://studio.nathanielguy.com/snow_on_glove</url>
+   <updatePeriod>week</updatePeriod>
+   <sortOrder>0</sortOrder>
+   <resourceOf rdf:resource="sitemap"/>
+</Resource>
+
+<Resource rdf:about="41">
+   <url>http://studio.nathanielguy.com/macro_flower</url>
+   <updatePeriod>week</updatePeriod>
+   <sortOrder>0</sortOrder>
+   <resourceOf rdf:resource="sitemap"/>
+</Resource>
+
+<Resource rdf:about="42">
+   <url>http://studio.nathanielguy.com/grandpa_in_a_glass</url>
+   <updatePeriod>week</updatePeriod>
+   <sortOrder>0</sortOrder>
+   <resourceOf rdf:resource="sitemap"/>
+</Resource>
+
+<Resource rdf:about="43">
+   <url>http://studio.nathanielguy.com/guitar_field</url>
+   <updatePeriod>week</updatePeriod>
+   <sortOrder>0</sortOrder>
+   <resourceOf rdf:resource="sitemap"/>
+</Resource>
+
+<Resource rdf:about="44">
+   <url>http://studio.nathanielguy.com/pink_flowers_and_brown</url>
+   <updatePeriod>week</updatePeriod>
+   <sortOrder>0</sortOrder>
+   <resourceOf rdf:resource="sitemap"/>
+</Resource>
+
+<Resource rdf:about="45">
+   <url>http://studio.nathanielguy.com/rss</url>
+   <updatePeriod>week</updatePeriod>
+   <sortOrder>0</sortOrder>
+   <resourceOf rdf:resource="3"/>
+</Resource>
+
+<Resource rdf:about="46">
+   <url>http://studio.nathanielguy.com/stylesheets/ror.css</url>
+   <updatePeriod>week</updatePeriod>
+   <sortOrder>0</sortOrder>
+   <resourceOf rdf:resource="10"/>
+</Resource>
+
+<Resource rdf:about="47">
+   <url>http://studio.nathanielguy.com/contact</url>
+   <updatePeriod>week</updatePeriod>
+   <sortOrder>1</sortOrder>
+   <resourceOf rdf:resource="11"/>
+</Resource>
+
+<Resource rdf:about="48">
+   <url>http://studio.nathanielguy.com/a_spoon_full_of_sky.jpg</url>
+   <updatePeriod>week</updatePeriod>
+   <sortOrder>1</sortOrder>
+   <resourceOf rdf:resource="14"/>
+</Resource>
+
+<Resource rdf:about="49">
+   <url>http://studio.nathanielguy.com/eek_a_spider.jpg</url>
+   <updatePeriod>week</updatePeriod>
+   <sortOrder>1</sortOrder>
+   <resourceOf rdf:resource="15"/>
+</Resource>
+
+<Resource rdf:about="50">
+   <url>http://studio.nathanielguy.com/the_lives_of_wood_worms.jpg</url>
+   <updatePeriod>week</updatePeriod>
+   <sortOrder>1</sortOrder>
+   <resourceOf rdf:resource="16"/>
+</Resource>
+
+<Resource rdf:about="51">
+   <url>http://studio.nathanielguy.com/shameful_head.jpg</url>
+   <updatePeriod>week</updatePeriod>
+   <sortOrder>1</sortOrder>
+   <resourceOf rdf:resource="17"/>
+</Resource>
+
+<Resource rdf:about="52">
+   <url>http://studio.nathanielguy.com/lines_in_the_bark.jpg</url>
+   <updatePeriod>week</updatePeriod>
+   <sortOrder>1</sortOrder>
+   <resourceOf rdf:resource="18"/>
+</Resource>
+
+<Resource rdf:about="53">
+   <url>http://studio.nathanielguy.com/pure_bright_and_simple_sunflower.jpg</url>
+   <updatePeriod>week</updatePeriod>
+   <sortOrder>1</sortOrder>
+   <resourceOf rdf:resource="19"/>
+</Resource>
+
+<Resource rdf:about="54">
+   <url>http://studio.nathanielguy.com/warm_white_flowers_in_the_sky.jpg</url>
+   <updatePeriod>week</updatePeriod>
+   <sortOrder>1</sortOrder>
+   <resourceOf rdf:resource="20"/>
+</Resource>
+
+<Resource rdf:about="55">
+   <url>http://studio.nathanielguy.com/budding_whites_and_yellows_of_spring.jpg</url>
+   <updatePeriod>week</updatePeriod>
+   <sortOrder>1</sortOrder>
+   <resourceOf rdf:resource="21"/>
+</Resource>
+
+<Resource rdf:about="56">
+   <url>http://studio.nathanielguy.com/white_flower_focus.jpg</url>
+   <updatePeriod>week</updatePeriod>
+   <sortOrder>1</sortOrder>
+   <resourceOf rdf:resource="22"/>
+</Resource>
+
+<Resource rdf:about="57">
+   <url>http://studio.nathanielguy.com/texture_butterfly.jpg</url>
+   <updatePeriod>week</updatePeriod>
+   <sortOrder>1</sortOrder>
+   <resourceOf rdf:resource="23"/>
+</Resource>
+
+<Resource rdf:about="58">
+   <url>http://studio.nathanielguy.com/hummingbird_grasshopper.jpg</url>
+   <updatePeriod>week</updatePeriod>
+   <sortOrder>1</sortOrder>
+   <resourceOf rdf:resource="24"/>
+</Resource>
+
+<Resource rdf:about="59">
+   <url>http://studio.nathanielguy.com/wind_chimes.jpg</url>
+   <updatePeriod>week</updatePeriod>
+   <sortOrder>1</sortOrder>
+   <resourceOf rdf:resource="25"/>
+</Resource>
+
+<Resource rdf:about="60">
+   <url>http://studio.nathanielguy.com/purple_and_white.jpg</url>
+   <updatePeriod>week</updatePeriod>
+   <sortOrder>1</sortOrder>
+   <resourceOf rdf:resource="26"/>
+</Resource>
+
+<Resource rdf:about="61">
+   <url>http://studio.nathanielguy.com/reflecto_glass.jpg</url>
+   <updatePeriod>week</updatePeriod>
+   <sortOrder>1</sortOrder>
+   <resourceOf rdf:resource="27"/>
+</Resource>
+
+<Resource rdf:about="62">
+   <url>http://studio.nathanielguy.com/falls_rain_remains.jpg</url>
+   <updatePeriod>week</updatePeriod>
+   <sortOrder>1</sortOrder>
+   <resourceOf rdf:resource="28"/>
+</Resource>
+
+<Resource rdf:about="63">
+   <url>http://studio.nathanielguy.com/the_horses_eye.jpg</url>
+   <updatePeriod>week</updatePeriod>
+   <sortOrder>1</sortOrder>
+   <resourceOf rdf:resource="29"/>
+</Resource>
+
+<Resource rdf:about="64">
+   <url>http://studio.nathanielguy.com/bee_hind.jpg</url>
+   <updatePeriod>week</updatePeriod>
+   <sortOrder>1</sortOrder>
+   <resourceOf rdf:resource="30"/>
+</Resource>
+
+<Resource rdf:about="65">
+   <url>http://studio.nathanielguy.com/yard_in_a_spoon.jpg</url>
+   <updatePeriod>week</updatePeriod>
+   <sortOrder>1</sortOrder>
+   <resourceOf rdf:resource="31"/>
+</Resource>
+
+<Resource rdf:about="66">
+   <url>http://studio.nathanielguy.com/spoon_flower.jpg</url>
+   <updatePeriod>week</updatePeriod>
+   <sortOrder>1</sortOrder>
+   <resourceOf rdf:resource="32"/>
+</Resource>
+
+<Resource rdf:about="67">
+   <url>http://studio.nathanielguy.com/the_bus_ride_book.jpg</url>
+   <updatePeriod>week</updatePeriod>
+   <sortOrder>1</sortOrder>
+   <resourceOf rdf:resource="33"/>
+</Resource>
+
+<Resource rdf:about="68">
+   <url>http://studio.nathanielguy.com/tree_boots.jpg</url>
+   <updatePeriod>week</updatePeriod>
+   <sortOrder>1</sortOrder>
+   <resourceOf rdf:resource="34"/>
+</Resource>
+
+<Resource rdf:about="69">
+   <url>http://studio.nathanielguy.com/sweeping_the_snow.jpg</url>
+   <updatePeriod>week</updatePeriod>
+   <sortOrder>1</sortOrder>
+   <resourceOf rdf:resource="35"/>
+</Resource>
+
+<Resource rdf:about="70">
+   <url>http://studio.nathanielguy.com/orange_tree_blue_sky.jpg</url>
+   <updatePeriod>week</updatePeriod>
+   <sortOrder>1</sortOrder>
+   <resourceOf rdf:resource="36"/>
+</Resource>
+
+<Resource rdf:about="71">
+   <url>http://studio.nathanielguy.com/augerasaurous.jpg</url>
+   <updatePeriod>week</updatePeriod>
+   <sortOrder>1</sortOrder>
+   <resourceOf rdf:resource="37"/>
+</Resource>
+
+<Resource rdf:about="72">
+   <url>http://studio.nathanielguy.com/boughs_of_snow.jpg</url>
+   <updatePeriod>week</updatePeriod>
+   <sortOrder>1</sortOrder>
+   <resourceOf rdf:resource="38"/>
+</Resource>
+
+<Resource rdf:about="73">
+   <url>http://studio.nathanielguy.com/three_in_a_row.jpg</url>
+   <updatePeriod>week</updatePeriod>
+   <sortOrder>1</sortOrder>
+   <resourceOf rdf:resource="39"/>
+</Resource>
+
+<Resource rdf:about="74">
+   <url>http://studio.nathanielguy.com/rainbow_fall_trees.jpg</url>
+   <updatePeriod>week</updatePeriod>
+   <sortOrder>1</sortOrder>
+   <resourceOf rdf:resource="40"/>
+</Resource>
+
+<Resource rdf:about="75">
+   <url>http://studio.nathanielguy.com/snow_on_glove.jpg</url>
+   <updatePeriod>week</updatePeriod>
+   <sortOrder>1</sortOrder>
+   <resourceOf rdf:resource="41"/>
+</Resource>
+
+<Resource rdf:about="76">
+   <url>http://studio.nathanielguy.com/macro_flower.jpg</url>
+   <updatePeriod>week</updatePeriod>
+   <sortOrder>1</sortOrder>
+   <resourceOf rdf:resource="42"/>
+</Resource>
+
+<Resource rdf:about="77">
+   <url>http://studio.nathanielguy.com/grandpa_in_a_glass.jpg</url>
+   <updatePeriod>week</updatePeriod>
+   <sortOrder>1</sortOrder>
+   <resourceOf rdf:resource="43"/>
+</Resource>
+
+<Resource rdf:about="78">
+   <url>http://studio.nathanielguy.com/guitar_field.jpg</url>
+   <updatePeriod>week</updatePeriod>
+   <sortOrder>1</sortOrder>
+   <resourceOf rdf:resource="44"/>
+</Resource>
+
+<Resource rdf:about="79">
+   <url>http://studio.nathanielguy.com/pink_flowers_and_brown.jpg</url>
+   <updatePeriod>week</updatePeriod>
+   <sortOrder>1</sortOrder>
+   <resourceOf rdf:resource=""/>
+</Resource>
+
+</rdf:RDF>

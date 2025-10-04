@@ -1,0 +1,94 @@
+<!--?xml version="1.0" encoding="UTF-8"?--><!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head>
+<!-- Describes Content -->
+<meta http-equiv="Content-Type" content="text/html; UTF-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta name="author" content="NathanielGuy">
+<meta name="description" content="NathanielGuy studios; a place for photography to reside and flourish.  Please take a look and enjoy!">
+<meta name="keywords" content="NathanielGuy, studios">
+<meta name="language" content="all">
+<meta name="robots" content="all">
+  <link rel="shortcut icon" href="../favicon.ico">
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="../rss/index.html">
+  <script src="../javascripts/prototype.js" type="text/javascript"></script>
+<script src="../javascripts/effects.js" type="text/javascript"></script>
+<title>NathanielGuy Studios: Slideshow</title>
+<style>
+body {
+ background-color:#000; color:#fff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+a:link {
+ color:#fff;
+ }
+a:visited {
+ text-decoration: none;
+ color:#a0a0a0;
+ }
+a:active {
+ text-decoration:overline;
+ }
+a:hover {
+ color: #fff; background-color:#000;
+ }
+</style>
+
+</head>
+
+<body style="text-align:center;">
+<div style="text-align:left; float:left;">
+<script type="text/javascript"><!--
+google_ad_client = "pub-5459318670925671";
+google_ad_width = 728;
+google_ad_height = 15;
+google_ad_format = "728x15_0ads_al_s";
+google_ad_channel ="";
+google_color_border = "000000";
+google_color_bg = "000000";
+google_color_link = "5B5B5B";
+google_color_url = "C1C1C1";
+google_color_text = "373737";
+//--></script>
+<script type="text/javascript" src="../pagead/show_ads.js">
+</script>
+</div>
+
+<div style="text-align:right; float:right;">
+<a href="../index.html" style="color:#535353; text-decoration:none;">studio.nathanielguy.com</a> - <a href="javascript:history.back();" style="color:#535353; text-decoration:none;">back</a>
+</div>
+
+<div id="active_photo" style="height:700px; clear:both; padding-top:30px;">
+<div style="font-variant:small-caps; font-size:xx-large; margin-top:30px;">Loading Slideshow...</div>
+</div>
+
+<!--
+<div style="text-align:center;">
+<script type="text/javascript"><!--
+google_ad_client = "pub-5459318670925671";
+google_alternate_color = "000000";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_type = "text";
+google_ad_channel ="";
+google_color_border = "000000";
+google_color_bg = "000000";
+google_color_link = "5B5B5B";
+google_color_url = "C1C1C1";
+google_color_text = "373737";
+//-->
+<script type="text/javascript" src="../pagead/show_ads.js">
+</script>
+--&gt;
+
+<!--<div id="inactive_photo" style="display:hidden; height:1px; overflow:hidden;">
+<img src="previews/mournful_bird_preview.jpg" />
+</div>-->
+
+<script type="text/javascript">
+//<![CDATA[
+new PeriodicalExecuter(function() {new Ajax.Request('/get_slideshow_picture', {asynchronous:true, evalScripts:true, onSuccess:function(request){Element.remove(document.getElementById("active_photo").getElementsByTagName("div")[0]); new Insertion.Bottom("active_photo", request.responseText); Effect.Appear(document.getElementById("active_photo").getElementsByTagName("div")[0]);}})}, 10)
+//]]>
+</script>
+
+
+</body></html>

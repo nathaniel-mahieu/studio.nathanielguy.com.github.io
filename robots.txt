@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /images/
+Disallow: /thumbnails/
+Disallow: /stylesheets/
+Disallow: /javascripts/
+Disallow: /get_photostream_pic
+Disallow: /get_slideshow_picture
